@@ -67,15 +67,15 @@ export default function Navbar() {
                 خدماتنا
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-64 glass-navbar border-[var(--primary)]/20">
+              <DropdownMenuContent className="w-64 glass-navbar border-[var(--primary)]/20 ">
                 {services.map((service, index) => (
                   <DropdownMenuItem
                     key={index}
-                    className="hover:bg-[var(--primary)]/10"
+                    className="hover:bg-[var(--primary)]/10 text-[ #d4a574]"
                   >
                     <Link
                       href={service.path}
-                      className="block w-full text-[var(--dark)] hover:text-[var(--accent)]"
+                      className="block w-full hover:text-[var(--dark)] text-[var(--accent)]"
                     >
                       {service.name}
                     </Link>
@@ -108,12 +108,10 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <div className="text-left" dir="ltr">
               <div className="text-sm text-[var(--accent)]">اتصل الآن</div>
-              <div className="font-bold text-[var(--dark)] ">
-                +966 50 123 4567
-              </div>
+              <div className="font-bold text-[var(--dark)] ">0580157728</div>
             </div>
             <a
-              href="https://wa.me/966501234567"
+              href="https://wa.me/0580157728"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -173,7 +171,7 @@ export default function Navbar() {
               تواصل معنا
             </Link>
             <a
-              href="https://wa.me/966501234567"
+              href="https://wa.me/0580157728"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
+import FloatingButton from "@/components/FloatingButton";
 
 const cairo = Cairo({
   subsets: ["arabic"],
@@ -16,7 +17,8 @@ export const metadata: Metadata = {
     "شركة رائدة في تصميم وتنفيذ واجهات المباني الحديثة، نقدم حلول كسوة مبتكرة بأعلى معايير الجودة العالمية",
   keywords:
     "كسوة متقدمة, واجهات حديثة, تصميم معماري, كسوة زجاجية, واجهات معدنية",
-  generator: "v0.dev",
+  generator: "Next.js",
+  authors: [{ name: "Ayaz Ahmad" }],
 };
 
 export default function RootLayout({
@@ -29,6 +31,7 @@ export default function RootLayout({
       <body className="antialiased bg-slate-50">
         <Navbar />
         {children}
+        <FloatingButton />
       </body>
     </html>
   );

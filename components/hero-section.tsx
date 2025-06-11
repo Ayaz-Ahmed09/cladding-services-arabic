@@ -423,7 +423,7 @@ export default function HeroSection() {
   return (
     <section className="relative min-h-screen pt-16 sm:pt-20 overflow-hidden">
       {/* Background Slider */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 ">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -468,7 +468,7 @@ export default function HeroSection() {
                 </span>
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-[var(--accent)] leading-relaxed max-w-xl font-light">
+              <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed max-w-xl font-light">
                 نحول الرؤى المعمارية إلى واقع مذهل. خبرة{" "}
                 <span className="number-display text-[var(--accent)]">15</span>{" "}
                 عاماً في إبداع واجهات تحكي قصص النجاح وتعكس هوية المكان.

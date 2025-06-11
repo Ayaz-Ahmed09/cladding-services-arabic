@@ -401,7 +401,7 @@ export default function RaisedLettersPage() {
         {/* WhatsApp & Call Cards */}
         <section className="py-10 px-6 md:px-16 bg-gray-100 flex flex-col md:flex-row items-center justify-center gap-6">
           <Link
-            href="https://wa.me/971500000000"
+            href="https://wa.me/0580157728"
             className="bg-green-500 hover:bg-green-600 text-white px-6 py-4 rounded-xl shadow-md flex items-center gap-3 w-full md:w-auto text-center justify-center"
             target="_blank"
           >
@@ -409,7 +409,7 @@ export default function RaisedLettersPage() {
           </Link>
 
           <Link
-            href="tel:+971500000000"
+            href="tel:+0580157728"
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-4 rounded-xl shadow-md flex items-center gap-3 w-full md:w-auto text-center justify-center"
           >
             <span className="text-lg font-semibold">اتصل بنا الآن</span>
