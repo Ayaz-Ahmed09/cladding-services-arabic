@@ -57,7 +57,7 @@ export default function HeroBackgroundSliderResponsive() {
         key={currentImage}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5 }}
         className="absolute inset-0 w-full h-full"
       >
         <Image

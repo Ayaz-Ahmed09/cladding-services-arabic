@@ -64,7 +64,6 @@ export default function NavbarClient() {
           تواصل معنا
         </Link>
       </div>
-
       {/* CTA Button */}
       <div className="hidden lg:flex items-center gap-4">
         <div className="text-left" dir="ltr">
@@ -82,27 +81,28 @@ export default function NavbarClient() {
           </Button>
         </a>
       </div>
-
       {/* Mobile Menu Toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden p-2 text-[#cd853f] hover:text-[var(--accent)] transition-colors"
+        className="lg:hidden relative p-2 text-[#cd853f] hover:text-[var(--accent)] transition-colors"
       >
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
-
       {/* Mobile Menu */}
+
       {isOpen && (
-        <div className="lg:hidden glass-navbar rounded-2xl mt-2 p-6 space-y-4">
+        <div className="lg:hidden absolute top-0 left-0 glass-navbar rounded-2xl mt-2 p-6 space-y-4">
           <Link
             href="/"
-            className="block text-[#cd853f] hover:text-[var(--accent)] font-medium py-2"
+            onClick={() => setIsOpen(false)}
+            className="block text-[#d4a574] hover:text-[var(--accent)] font-medium py-2"
           >
             الرئيسية
           </Link>
+
           <div className="space-y-2">
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center gap-1 text-[#cd853f] hover:text-[var(--accent)] font-medium transition-colors">
+              <DropdownMenuTrigger className="flex items-center gap-1 text-[#d4a574] hover:text-[var(--accent)] font-medium transition-colors">
                 خدماتنا
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
@@ -111,6 +111,7 @@ export default function NavbarClient() {
                   <DropdownMenuItem key={index} asChild>
                     <Link
                       href={service.path}
+                      onClick={() => setIsOpen(false)}
                       className="block w-full hover:text-[var(--dark)] text-[#ffffff] px-2 py-1"
                     >
                       {service.name}
@@ -120,16 +121,20 @@ export default function NavbarClient() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
+
           <Link
             href="#contact"
+            onClick={() => setIsOpen(false)}
             className="block text-[#cd853f] hover:text-[var(--accent)] font-medium py-2"
           >
             تواصل معنا
           </Link>
+
           <a
             href="https://wa.me/+966580157728"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => setIsOpen(false)}
           >
             <Button className="bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] hover:from-[var(--accent)] hover:to-[var(--secondary)] text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 transform hover:scale-105">
               <Phone className="w-4 h-4 ml-2" />

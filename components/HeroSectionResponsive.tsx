@@ -20,7 +20,7 @@ export default function HeroSectionResponsive({
           {/* Text Content */}
           <div className="space-y-6 sm:space-y-8">
             {badgeText && (
-              <div className="inline-flex items-center gap-3 glass-navbar text-[var(--dark)] px-6 py-3 rounded-full text-sm font-medium animate-pulse">
+              <div className="inline-flex items-center gap-3 glass-navbar text-[#d4a574] px-6 py-3 rounded-full text-sm font-medium animate-pulse">
                 <span className="w-5 h-5 text-[var(--accent)]">★</span>
                 <span>{badgeText}</span>
               </div>
@@ -28,9 +28,7 @@ export default function HeroSectionResponsive({
 
             <div className="space-y-4 sm:space-y-6">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
-                <span className="block text-[var(--dark)] mb-2">
-                  {headingTop}
-                </span>
+                <span className="block text-[#d4a574] mb-2">{headingTop}</span>
                 <span className="block text-gradient text-5xl sm:text-7xl md:text-8xl font-black">
                   {headingMiddle}
                 </span>
@@ -39,7 +37,7 @@ export default function HeroSectionResponsive({
                 </span>
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed max-w-xl font-light">
+              <p className="text-base sm:text-lg md:text-xl text-[#d4a574] leading-relaxed max-w-xl font-light">
                 {paragraph}
               </p>
             </div>
