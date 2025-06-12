@@ -401,150 +401,407 @@
 //   );
 // }
 
-"use client";
+// "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Star, Award, Zap, Shield, Eye, Layers } from "lucide-react";
-import Image from "next/image";
+// import { useState, useEffect } from "react";
+// import { motion, AnimatePresence } from "framer-motion";
+// import { Star, Award, Zap, Shield, Eye, Layers } from "lucide-react";
+// import Image from "next/image";
 
-export default function HeroSection() {
-  const images = ["/office.jpg", "/shop.jpg", "/house.jpg", "/board.jpg"];
+// export default function HeroSection() {
+//   const images = ["/office.jpg", "/shop.jpg", "/house.jpg", "/board.jpg"];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+//   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 6000);
-    return () => clearInterval(interval);
-  }, [images.length]);
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentIndex((prev) => (prev + 1) % images.length);
+//     }, 6000);
+//     return () => clearInterval(interval);
+//   }, [images.length]);
 
+//   return (
+//     <section className="relative min-h-screen pt-16 sm:pt-20 overflow-hidden">
+//       {/* Background Slider */}
+//       <div className="absolute inset-0 z-0 ">
+//         <AnimatePresence mode="wait">
+//           <motion.div
+//             key={currentIndex}
+//             initial={{ opacity: 0.5 }}
+//             animate={{ opacity: 1 }}
+//             exit={{ opacity: 0 }}
+//             transition={{ duration: 1 }}
+//             className="absolute inset-0 w-full h-full"
+//           >
+//             <Image
+//               src={images[currentIndex]}
+//               alt={`Background ${currentIndex + 1}`}
+//               layout="fill"
+//               objectFit="cover"
+//               className="brightness-50"
+//               priority
+//             />
+//           </motion.div>
+//         </AnimatePresence>
+//       </div>
+
+//       {/* Overlay Content */}
+//       <div className="relative z-10 container mx-auto px-4 py-12 sm:py-20">
+//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center min-h-[70vh] sm:min-h-[80vh]">
+//           {/* Content Section */}
+//           <div className="space-y-6 sm:space-y-8">
+//             <div className="inline-flex items-center gap-2 sm:gap-3 glass-navbar text-[var(--dark)] px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium animate-pulse">
+//               <Star className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--accent)]" />
+//               <span>الشركة الرائدة في المملكة العربية السعودية</span>
+//             </div>
+
+//             <div className="space-y-4 sm:space-y-6">
+//               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
+//                 <span className="block text-[var(--dark)] mb-2">
+//                   واجهات كلادينج
+//                 </span>
+//                 <span className="block text-gradient text-5xl sm:text-7xl md:text-8xl font-black">
+//                   عصرية
+//                 </span>
+//                 <span className="block text-[var(--accent)] text-xl sm:text-2xl md:text-3xl font-light">
+//                   تعكس فخامة مشروعك
+//                 </span>
+//               </h1>
+
+//               <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed max-w-xl font-light">
+//                 نحول الرؤى المعمارية إلى واقع مذهل. خبرة{" "}
+//                 <span className="number-display text-[var(--accent)]">15</span>{" "}
+//                 عاماً في إبداع واجهات تحكي قصص النجاح وتعكس هوية المكان.
+//               </p>
+//             </div>
+
+//             {/* Features Grid */}
+//             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-xl">
+//               {[
+//                 {
+//                   icon: Shield,
+//                   text: "ضمان مدى الحياة",
+//                   color: "from-green-500 to-emerald-500",
+//                 },
+//                 {
+//                   icon: Zap,
+//                   text: "تنفيذ في وقت قياسي",
+//                   color: "from-yellow-500 to-orange-500",
+//                 },
+//                 {
+//                   icon: Award,
+//                   text: "جوائز عالمية",
+//                   color: "from-purple-500 to-pink-500",
+//                 },
+//                 {
+//                   icon: Eye,
+//                   text: "تصاميم حصرية",
+//                   color: "from-blue-500 to-cyan-500",
+//                 },
+//               ].map((feature, index) => (
+//                 <div
+//                   key={index}
+//                   className="feature-card group cursor-pointer rounded-2xl p-4 sm:p-6"
+//                 >
+//                   <div className="flex items-center gap-3 sm:gap-4">
+//                     <div
+//                       className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-lg`}
+//                     >
+//                       <feature.icon className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
+//                     </div>
+//                     <span className="font-bold text-[var(--dark)] group-hover:text-[var(--accent)] transition-colors duration-300 text-base sm:text-lg">
+//                       {feature.text}
+//                     </span>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+
+//           {/* Visual Section */}
+//           <div className="relative project-showcase hidden lg:block">
+//             {/* You can keep your visual cards here */}
+//           </div>
+//         </div>
+
+//         {/* Bottom Stats Bar */}
+//         <div className="mt-12 sm:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 text-center">
+//           {[
+//             { number: "15+", label: "سنة خبرة", icon: Award },
+//             { number: "500+", label: "مشروع منجز", icon: Layers },
+//             { number: "98%", label: "رضا العملاء", icon: Star },
+//             { number: "24/7", label: "دعم فني", icon: Shield },
+//           ].map((stat, index) => (
+//             <div key={index} className="group">
+//               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+//                 <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
+//               </div>
+//               <div className="text-xl sm:text-2xl font-black text-[var(--dark)] mb-0.5 sm:mb-1 number-display">
+//                 {stat.number}
+//               </div>
+//               <div className="text-[var(--dark)]/70 text-sm sm:text-base font-medium">
+//                 {stat.label}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+// "use client";
+
+// import { useState, useEffect } from "react";
+// import { motion } from "framer-motion";
+// import { Star, Award, Zap, Shield, Eye, Layers } from "lucide-react";
+// import Image from "next/image";
+
+// const images = ["/office.jpg", "/shop.jpg", "/house.jpg", "/board.jpg"];
+
+// const features = [
+//   {
+//     icon: Shield,
+//     text: "ضمان مدى الحياة",
+//     color: "from-green-500 to-emerald-500",
+//   },
+//   {
+//     icon: Zap,
+//     text: "تنفيذ في وقت قياسي",
+//     color: "from-yellow-500 to-orange-500",
+//   },
+//   { icon: Award, text: "جوائز عالمية", color: "from-purple-500 to-pink-500" },
+//   { icon: Eye, text: "تصاميم حصرية", color: "from-blue-500 to-cyan-500" },
+// ];
+
+// const stats = [
+//   { number: "15+", label: "سنة خبرة", icon: Award },
+//   { number: "500+", label: "مشروع منجز", icon: Layers },
+//   { number: "98%", label: "رضا العملاء", icon: Star },
+//   { number: "24/7", label: "دعم فني", icon: Shield },
+// ];
+
+// export default function HeroSection() {
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   useEffect(() => {
+//     const interval = setInterval(
+//       () => setCurrentIndex((prev) => (prev + 1) % images.length),
+//       6000
+//     );
+//     return () => clearInterval(interval);
+//   }, []);
+
+//   return (
+//     <section className="relative min-h-screen pt-16 sm:pt-20 overflow-hidden">
+//       {/* Background Slider */}
+//       <div className="absolute inset-0 z-0">
+//         <motion.div
+//           key={currentIndex}
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           transition={{ duration: 1 }}
+//           className="absolute inset-0 w-full h-full"
+//         >
+//           <Image
+//             src={images[currentIndex]}
+//             alt={`Background ${currentIndex + 1}`}
+//             fill
+//             sizes="100vw"
+//             className="object-cover brightness-50"
+//             priority={currentIndex === 0}
+//             loading={currentIndex === 0 ? "eager" : "lazy"}
+//           />
+//         </motion.div>
+//       </div>
+
+//       {/* Overlay Content */}
+//       <div className="relative z-10 container mx-auto px-4 py-12 sm:py-20">
+//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center min-h-[70vh] sm:min-h-[80vh]">
+//           {/* Text Content */}
+//           <div className="space-y-6 sm:space-y-8">
+//             <div className="inline-flex items-center gap-3 glass-navbar text-[var(--dark)] px-6 py-3 rounded-full text-sm font-medium animate-pulse">
+//               <Star className="w-5 h-5 text-[var(--accent)]" />
+//               <span>الشركة الرائدة في المملكة العربية السعودية</span>
+//             </div>
+
+//             <div className="space-y-4 sm:space-y-6">
+//               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
+//                 <span className="block text-[var(--dark)] mb-2">
+//                   واجهات كلادينج
+//                 </span>
+//                 <span className="block text-gradient text-5xl sm:text-7xl md:text-8xl font-black">
+//                   عصرية
+//                 </span>
+//                 <span className="block text-[var(--accent)] text-xl sm:text-2xl md:text-3xl font-light">
+//                   تعكس فخامة مشروعك
+//                 </span>
+//               </h1>
+
+//               <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed max-w-xl font-light">
+//                 نحول الرؤى المعمارية إلى واقع مذهل. خبرة{" "}
+//                 <span className="number-display text-[var(--accent)]">15</span>{" "}
+//                 عاماً في إبداع واجهات تحكي قصص النجاح وتعكس هوية المكان.
+//               </p>
+//             </div>
+
+//             {/* Feature Cards */}
+//             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl">
+//               {features.map(({ icon: Icon, text, color }, i) => (
+//                 <div
+//                   key={i}
+//                   className="group rounded-2xl p-6 feature-card cursor-pointer"
+//                 >
+//                   <div className="flex items-center gap-4">
+//                     <div
+//                       className={`w-14 h-14 bg-gradient-to-br ${color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-all duration-500 shadow-lg`}
+//                     >
+//                       <Icon className="w-7 h-7 text-white" />
+//                     </div>
+//                     <span className="font-bold text-[var(--dark)] group-hover:text-[var(--accent)] transition-colors duration-300 text-lg">
+//                       {text}
+//                     </span>
+//                   </div>
+//                 </div>
+//               ))}
+//             </div>
+//           </div>
+
+//           {/* Visual Right Side (Optional Showcase) */}
+//           <div className="hidden lg:block relative project-showcase">
+//             {/* You can place a building render or client logo carousel here later */}
+//           </div>
+//         </div>
+
+//         {/* Stats Bar */}
+//         <div className="mt-12 sm:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+//           {stats.map(({ icon: Icon, number, label }, i) => (
+//             <div key={i} className="group">
+//               <div className="w-16 h-16 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+//                 <Icon className="w-8 h-8 text-white" />
+//               </div>
+//               <div className="text-2xl font-black text-[var(--dark)] number-display">
+//                 {number}
+//               </div>
+//               <div className="text-[var(--dark)]/70 text-base font-medium">
+//                 {label}
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+// import HeroBackgroundSlider from "./HeroBackgroundSlider";
+// import FeaturesGrid from "./FeaturesGrid";
+// import StatsGrid from "./StatsGrid";
+
+// export default function HeroSection() {
+//   return (
+//     <section className="relative min-h-screen pt-16 sm:pt-20 overflow-hidden">
+//       {/* Background Slider */}
+//       <HeroBackgroundSlider />
+
+//       {/* Overlay Content */}
+//       <div className="relative z-10 container mx-auto px-4 py-12 sm:py-20">
+//         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center min-h-[70vh] sm:min-h-[80vh]">
+//           {/* Text Content */}
+//           <div className="space-y-6 sm:space-y-8">
+//             <div className="inline-flex items-center gap-3 glass-navbar text-[var(--dark)] px-6 py-3 rounded-full text-sm font-medium animate-pulse">
+//               <span className="w-5 h-5 text-[var(--accent)]">★</span>
+//               <span>الشركة الرائدة في المملكة العربية السعودية</span>
+//             </div>
+
+//             <div className="space-y-4 sm:space-y-6">
+//               <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
+//                 <span className="block text-[var(--dark)] mb-2">
+//                   واجهات كلادينج
+//                 </span>
+//                 <span className="block text-gradient text-5xl sm:text-7xl md:text-8xl font-black">
+//                   عصرية
+//                 </span>
+//                 <span className="block text-[var(--accent)] text-xl sm:text-2xl md:text-3xl font-light">
+//                   تعكس فخامة مشروعك
+//                 </span>
+//               </h1>
+
+//               <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed max-w-xl font-light">
+//                 نحول الرؤى المعمارية إلى واقع مذهل. خبرة{" "}
+//                 <span className="number-display text-[var(--accent)]">15</span>{" "}
+//                 عاماً في إبداع واجهات تحكي قصص النجاح وتعكس هوية المكان.
+//               </p>
+//             </div>
+
+//             <FeaturesGrid />
+//           </div>
+
+//           <div className="hidden lg:block relative project-showcase"></div>
+//         </div>
+
+//         {/* <StatsGrid /> */}
+//       </div>
+//     </section>
+//   );
+// }
+
+// code snippt 3
+
+import HeroBackgroundSlider from "./HeroBackgroundSlider";
+import FeaturesGrid from "./FeaturesGrid";
+import StatsGrid from "./StatsGrid";
+
+type HeroSectionProps = {
+  images: string[];
+  badgeText: string;
+  headingLines: [string, string, string]; // [topLine, middleLine (gradient), bottomLine (accent)]
+  description: string;
+};
+
+export default function HeroSection({
+  images,
+  badgeText,
+  headingLines,
+  description,
+}: HeroSectionProps) {
   return (
     <section className="relative min-h-screen pt-16 sm:pt-20 overflow-hidden">
-      {/* Background Slider */}
-      <div className="absolute inset-0 z-0 ">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0.5 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            className="absolute inset-0 w-full h-full"
-          >
-            <Image
-              src={images[currentIndex]}
-              alt={`Background ${currentIndex + 1}`}
-              layout="fill"
-              objectFit="cover"
-              className="brightness-50"
-              priority
-            />
-          </motion.div>
-        </AnimatePresence>
-      </div>
+      <HeroBackgroundSlider images={images} />
 
-      {/* Overlay Content */}
       <div className="relative z-10 container mx-auto px-4 py-12 sm:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 items-center min-h-[70vh] sm:min-h-[80vh]">
-          {/* Content Section */}
+          {/* Text Content */}
           <div className="space-y-6 sm:space-y-8">
-            <div className="inline-flex items-center gap-2 sm:gap-3 glass-navbar text-[var(--dark)] px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-medium animate-pulse">
-              <Star className="w-4 h-4 sm:w-5 sm:h-5 text-[var(--accent)]" />
-              <span>الشركة الرائدة في المملكة العربية السعودية</span>
+            <div className="inline-flex items-center gap-3 glass-navbar text-[var(--dark)] px-4 py-2 rounded-full text-sm font-medium animate-pulse">
+              <span className="w-5 h-5 text-[var(--accent)]">★</span>
+              <span>{badgeText}</span>
             </div>
 
             <div className="space-y-4 sm:space-y-6">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-tight">
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-black leading-tight">
                 <span className="block text-[var(--dark)] mb-2">
-                  واجهات كلادينج
+                  {headingLines[0]}
                 </span>
-                <span className="block text-gradient text-5xl sm:text-7xl md:text-8xl font-black">
-                  عصرية
+                <span className="block text-gradient text-4xl sm:text-5xl lg:text-7xl font-black">
+                  {headingLines[1]}
                 </span>
-                <span className="block text-[var(--accent)] text-xl sm:text-2xl md:text-3xl font-light">
-                  تعكس فخامة مشروعك
+                <span className="block text-[var(--accent)] text-2xl sm:text-xl lg:text-3xl font-light">
+                  {headingLines[2]}
                 </span>
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed max-w-xl font-light">
-                نحول الرؤى المعمارية إلى واقع مذهل. خبرة{" "}
-                <span className="number-display text-[var(--accent)]">15</span>{" "}
-                عاماً في إبداع واجهات تحكي قصص النجاح وتعكس هوية المكان.
+              <p className="text-sm sm:text-base lg:text-lg text-[#8b4513] leading-relaxed max-w-xl font-light">
+                {description}
               </p>
             </div>
 
-            {/* Features Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-xl">
-              {[
-                {
-                  icon: Shield,
-                  text: "ضمان مدى الحياة",
-                  color: "from-green-500 to-emerald-500",
-                },
-                {
-                  icon: Zap,
-                  text: "تنفيذ في وقت قياسي",
-                  color: "from-yellow-500 to-orange-500",
-                },
-                {
-                  icon: Award,
-                  text: "جوائز عالمية",
-                  color: "from-purple-500 to-pink-500",
-                },
-                {
-                  icon: Eye,
-                  text: "تصاميم حصرية",
-                  color: "from-blue-500 to-cyan-500",
-                },
-              ].map((feature, index) => (
-                <div
-                  key={index}
-                  className="feature-card group cursor-pointer rounded-2xl p-4 sm:p-6"
-                >
-                  <div className="flex items-center gap-3 sm:gap-4">
-                    <div
-                      className={`w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-lg`}
-                    >
-                      <feature.icon className="w-5 h-5 sm:w-7 sm:h-7 text-white" />
-                    </div>
-                    <span className="font-bold text-[var(--dark)] group-hover:text-[var(--accent)] transition-colors duration-300 text-base sm:text-lg">
-                      {feature.text}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <FeaturesGrid />
           </div>
 
-          {/* Visual Section */}
-          <div className="relative project-showcase hidden lg:block">
-            {/* You can keep your visual cards here */}
-          </div>
+          <div className="hidden lg:block relative project-showcase"></div>
         </div>
 
-        {/* Bottom Stats Bar */}
-        <div className="mt-12 sm:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 text-center">
-          {[
-            { number: "15+", label: "سنة خبرة", icon: Award },
-            { number: "500+", label: "مشروع منجز", icon: Layers },
-            { number: "98%", label: "رضا العملاء", icon: Star },
-            { number: "24/7", label: "دعم فني", icon: Shield },
-          ].map((stat, index) => (
-            <div key={index} className="group">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-2xl flex items-center justify-center mx-auto mb-2 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
-                <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-              </div>
-              <div className="text-xl sm:text-2xl font-black text-[var(--dark)] mb-0.5 sm:mb-1 number-display">
-                {stat.number}
-              </div>
-              <div className="text-[var(--dark)]/70 text-sm sm:text-base font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* <StatsGrid /> */}
       </div>
     </section>
   );

@@ -5,76 +5,23 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Ruler, Star } from "lucide-react";
 import Image from "next/image";
 
-const projects = [
-  {
-    title: "مجمع الأعمال التجاري الذكي",
-    location: "الرياض، حي الملك عبدالله المالي",
-    area: "3,500 م²",
-    duration: "6 أشهر",
-    type: "واجهة زجاجية تفاعلية",
-    image: "/p1.jpg?height=400&width=600",
-    status: "مكتمل",
-    rating: 5,
-    client: "شركة التطوير العقاري",
-  },
-  {
-    title: "برج السكن الفاخر المعاصر",
-    location: "جدة، كورنيش البحر الأحمر",
-    area: "2,800 م²",
-    duration: "4 أشهر",
-    type: "كسوة معدنية متطورة",
-    image: "/p2.jpg?height=400&width=600",
-    status: "قيد التنفيذ",
-    rating: 5,
-    client: "مجموعة الإسكان الراقي",
-  },
-  {
-    title: "مركز التسوق والترفيه الكبير",
-    location: "الدمام، منطقة الأعمال المركزية",
-    area: "5,200 م²",
-    duration: "8 أشهر",
-    type: "واجهة مركبة مبتكرة",
-    image: "/p3.jpg?height=400&width=600",
-    status: "مكتمل",
-    rating: 5,
-    client: "شركة المراكز التجارية",
-  },
-  {
-    title: "مركز المدينة للإعلانات البصرية",
-    location: "الخبر، طريق الملك عبدالعزيز",
-    area: "1,200 م²",
-    duration: "3 أشهر",
-    type: "حروف بارزة ثلاثية الأبعاد بإضاءة خلفية",
-    image: "/p4.jpg?height=400&width=600",
-    status: "مكتمل",
-    rating: 5,
-    client: "مؤسسة الحلول الإبداعية للإعلان",
-  },
-  {
-    title: "مركز الخدمات الذكية",
-    location: "الرياض، حي النخيل",
-    area: "1,600 م²",
-    duration: "2.5 أشهر",
-    type: "ديكورات داخلية باستخدام تقنية CNC",
-    image: "/p5.jpg?height=400&width=600",
-    status: "قيد التنفيذ",
-    rating: 5,
-    client: "شركة التقنية المتقدمة",
-  },
-  {
-    title: "مبنى المقر الرئيسي لشركة برايم",
-    location: "جدة، حي الشاطئ",
-    area: "2,000 م²",
-    duration: "3.5 أشهر",
-    type: "حروف مرفوعة لواجهة الشركة ولوحات داخلية",
-    image: "/p6.jpg?height=400&width=600",
-    status: "مكتمل",
-    rating: 5,
-    client: "شركة برايم للخدمات اللوجستية",
-  },
-];
+type Project = {
+  title: string;
+  location: string;
+  area: string;
+  duration: string;
+  type: string;
+  image: string;
+  status: string;
+  rating: number;
+  client: string;
+};
 
-export default function ProjectsShowcase() {
+export default function DynamicProjectGallery({
+  projects,
+}: {
+  projects: Project[];
+}) {
   return (
     <section className="py-20 bg-gradient-to-br from-[var(--light)] to-white relative overflow-hidden">
       {/* Decorative Elements */}
@@ -136,19 +83,6 @@ export default function ProjectsShowcase() {
                     />
                   ))}
                 </div>
-
-                {/* Overlay */}
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end">
-                  <div className="p-6 text-white w-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                    <Button
-                      size="sm"
-                      className="bg-white/20 hover:bg-white/30 text-white border-white/30 backdrop-blur-sm"
-                    >
-                      عرض دراسة الحالة
-                      <ArrowLeft className="w-4 h-4 mr-2" />
-                    </Button>
-                  </div>
-                </div> */}
               </div>
 
               <CardContent className="p-8">
@@ -193,17 +127,6 @@ export default function ProjectsShowcase() {
             </Card>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        {/* <div className="text-center">
-          <Button
-            size="lg"
-            className="bg-gradient-to-r from-[var(--accent)] to-[var(--secondary)] hover:from-[var(--secondary)] hover:to-[var(--primary)] text-white px-16 py-6 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 shadow-2xl"
-          >
-            استعرض جميع المشاريع والإنجازات
-            <ArrowLeft className="w-6 h-6 mr-3" />
-          </Button>
-        </div> */}
       </div>
     </section>
   );

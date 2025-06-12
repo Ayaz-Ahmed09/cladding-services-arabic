@@ -115,22 +115,70 @@
 //             نحن بانتظاركم بكل ترحيب!
 //           </p>
 
-//           <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-8">
+//           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
 //             <a
-//               href="https://wa.me/0580157728"
+//               href="https://wa.me/+966580157728"
 //               target="_blank"
-//               className="inline-flex items-center gap-3 px-6 py-3 bg-green-500 text-white rounded-full shadow-md hover:bg-green-600 transition"
+//               className="inline-flex flex-col items-center justify-center gap-3 px-6 py-6 bg-green-500 text-white rounded-2xl shadow-md hover:bg-green-600 transition text-center"
 //             >
-//               <MessageSquareText className="w-5 h-5" />
-//               تواصل واتساب
+//               <MessageSquareText className="w-6 h-6" />
+//               <span className="font-bold">تواصل واتساب</span>
 //             </a>
+
 //             <a
-//               href="tel:+0580157728"
-//               className="inline-flex items-center gap-3 px-6 py-3 bg-blue-500 text-white rounded-full shadow-md hover:bg-blue-600 transition"
+//               href="tel:+966580157728"
+//               className="inline-flex flex-col items-center justify-center gap-3 px-6 py-6 bg-blue-500 text-white rounded-2xl shadow-md hover:bg-blue-600 transition text-center"
 //             >
-//               <Phone className="w-5 h-5" />
-//               اتصال مباشر
+//               <Phone className="w-6 h-6" />
+//               <span className="font-bold">اتصال مباشر</span>
 //             </a>
+
+//             <a
+//               href="mailto:goldenletter1@gmail.com"
+//               className="inline-flex flex-col items-center justify-center gap-3 px-6 py-6 bg-gradient-to-br from-[#d4a574] to-[#cd853f] text-white rounded-2xl shadow-md hover:text-black transition text-center"
+//             >
+//               <svg
+//                 xmlns="http://www.w3.org/2000/svg"
+//                 className="w-6 h-6"
+//                 fill="none"
+//                 viewBox="0 0 24 24"
+//                 stroke="currentColor"
+//               >
+//                 <path
+//                   strokeLinecap="round"
+//                   strokeLinejoin="round"
+//                   strokeWidth={2}
+//                   d="M16 12H8m8 0a4 4 0 10-8 0 4 4 0 008 0zm0 0v4m0-4v-4"
+//                 />
+//               </svg>
+//               <span className="font-bold">البريد الإلكتروني</span>
+//             </a>
+
+//             <div className="bg-gray-100 text-[var(--dark)] rounded-2xl shadow-md p-6 text-center flex flex-col items-center justify-center">
+//               <svg
+//                 xmlns="http://www.w3.org/2000/svg"
+//                 className="w-6 h-6 text-red-600 mb-2"
+//                 fill="none"
+//                 viewBox="0 0 24 24"
+//                 stroke="currentColor"
+//               >
+//                 <path
+//                   strokeLinecap="round"
+//                   strokeLinejoin="round"
+//                   strokeWidth={2}
+//                   d="M12 2C8.13401 2 5 5.13401 5 9c0 4.694 5.788 11.294 6.362 11.962a1 1 0 001.276 0C13.212 20.294 19 13.694 19 9c0-3.86599-3-7-7-7z"
+//                 />
+//               </svg>
+//               <iframe
+//                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3626.784058026829!2d46.73597480000001!3d24.631126500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f05c46f064845%3A0xaef7cdb6d50e3220!2sGolden%20Letters%20Advertisment!5e0!3m2!1sen!2s!4v1749721812542!5m2!1sen!2s"
+//                 width="600"
+//                 height="450"
+//                 loading="lazy"
+//               ></iframe>
+//               <p className="text-sm text-[var(--dark)]/70 mt-1">
+//                 مجمع وسط التجاري مقابل سالم زجاج, Riyadh 12662, Saudi Arabia
+//               </p>
+//             </div>
 //           </div>
 //         </div>
 
@@ -167,8 +215,7 @@
 //     </section>
 //   );
 // }
-
-// code #2
+// code # 2
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -288,7 +335,7 @@ export default function TechSpecs() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
             <a
-              href="https://wa.me/0580157728"
+              href="https://wa.me/+966580157728"
               target="_blank"
               className="inline-flex flex-col items-center justify-center gap-3 px-6 py-6 bg-green-500 text-white rounded-2xl shadow-md hover:bg-green-600 transition text-center"
             >
@@ -297,7 +344,7 @@ export default function TechSpecs() {
             </a>
 
             <a
-              href="tel:+0580157728"
+              href="tel:+966580157728"
               className="inline-flex flex-col items-center justify-center gap-3 px-6 py-6 bg-blue-500 text-white rounded-2xl shadow-md hover:bg-blue-600 transition text-center"
             >
               <Phone className="w-6 h-6" />
@@ -305,7 +352,7 @@ export default function TechSpecs() {
             </a>
 
             <a
-              href="mailto:info@example.com"
+              href="mailto:goldenletter1@gmail.com"
               className="inline-flex flex-col items-center justify-center gap-3 px-6 py-6 bg-gradient-to-br from-[#d4a574] to-[#cd853f] text-white rounded-2xl shadow-md hover:text-black transition text-center"
             >
               <svg
@@ -325,26 +372,40 @@ export default function TechSpecs() {
               <span className="font-bold">البريد الإلكتروني</span>
             </a>
 
-            <div className="bg-gray-100 text-[var(--dark)] rounded-2xl shadow-md p-6 text-center flex flex-col items-center justify-center">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 text-red-600 mb-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 2C8.13401 2 5 5.13401 5 9c0 4.694 5.788 11.294 6.362 11.962a1 1 0 001.276 0C13.212 20.294 19 13.694 19 9c0-3.86599-3-7-7-7z"
-                />
-              </svg>
-              <p className="font-bold">الرياض - حي العليا</p>
-              <p className="text-sm text-[var(--dark)]/70 mt-1">
-                مقابل برج المملكة
-              </p>
-            </div>
+            {/* Updated Map Card */}
+            <Card className="border-0 bg-white/80 backdrop-blur-sm shadow-lg overflow-hidden">
+              <CardContent className="p-4">
+                <div className="w-full aspect-video rounded-xl overflow-hidden mb-4">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3626.784058026829!2d46.73597480000001!3d24.631126500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f05c46f064845%3A0xaef7cdb6d50e3220!2sGolden%20Letters%20Advertisment!5e0!3m2!1sen!2s!4v1749721812542!5m2!1sen!2s"
+                    loading="lazy"
+                    className="w-full h-full border-0"
+                    allowFullScreen
+                    referrerPolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
+                <div className="flex items-center justify-center gap-2 text-sm text-[var(--dark)]/70">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-5 h-5 text-red-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 2C8.13401 2 5 5.13401 5 9c0 4.694 5.788 11.294 6.362 11.962a1 1 0 001.276 0C13.212 20.294 19 13.694 19 9c0-3.86599-3-7-7-7z"
+                    />
+                  </svg>
+                  <span>
+                    مجمع وسط التجاري مقابل سالم زجاج, الرياض 12662، المملكة
+                    العربية السعودية
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
 

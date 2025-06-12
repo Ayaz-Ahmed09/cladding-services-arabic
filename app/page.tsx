@@ -10,7 +10,13 @@ export default function Home() {
       {/* <Navbar /> */}
 
       <main>
-        <HeroSection />
+        <HeroSection
+          images={["/aluminiumum.jpg", "/stone.jpg", "/metal.jpg"]}
+          badgeText={"الشركة الرائدة في المملكة العربية السعودية"}
+          headingLines={["واجهات", "كلادينج", "عصرية"]}
+          description={"تعكس فخامة مشروعك"}
+        />
+
         <ServicesSection />
         <ProjectsShowcase />
         <TechSpecs />
