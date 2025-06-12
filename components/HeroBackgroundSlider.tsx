@@ -32,6 +32,7 @@ export default function HeroBackgroundSlider({ images }: SliderProps) {
           src={images[currentIndex]}
           alt={`Background ${currentIndex + 1}`}
           fill
+          loading="eager"
           sizes="100vw"
           className="object-cover brightness-50"
           priority={currentIndex === 0}
