@@ -518,7 +518,7 @@ export default function ServicesSection() {
 
           <h2 className="text-4xl md:text-6xl font-black text-[var(--dark)] mb-8">
             <span className="block">حلول شاملة</span>
-            <span className="text-gradient">لجميع احتياجات تركيب الكسوة</span>
+            <span className="text-gradient">لجميع احتياجات تركيب كلادينج</span>
           </h2>
 
           <p className="text-xl text-[var(--dark)]/70 max-w-4xl mx-auto leading-relaxed font-light">
