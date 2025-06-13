@@ -27,7 +27,7 @@ type ServicesSectionProps = {
 export default function ServicesSection({
   services,
   sectionTitle = "خدماتنا المتخصصة",
-  sectionSubtitle = "حلول شاملة لجميع احتياجات الكسوة",
+  sectionSubtitle = "حلول شاملة لجميع احتياجات تركيب الكسوة",
   headerIcon: HeaderIcon = ArrowLeft,
   ctaText,
   ctaLink,
@@ -61,8 +61,9 @@ export default function ServicesSection({
           </h2>
 
           <p className="text-xl text-[var(--dark)]/70 max-w-4xl mx-auto leading-relaxed font-light">
-            نقدم مجموعة متكاملة من الخدمات المتخصصة في مجال الكسوة والواجهات، مع
-            التركيز على الجودة والابتكار والالتزام بالمواعيد المحددة
+            نقدم مجموعة متكاملة من الخدمات المتخصصة في مجال تركيب الكسوة
+            والواجهات، مع التركيز على الجودة والابتكار والالتزام بالمواعيد
+            المحددة
           </p>
         </div>
 

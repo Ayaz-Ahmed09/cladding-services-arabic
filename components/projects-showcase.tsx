@@ -1,7 +1,6 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Ruler, Star } from "lucide-react";
 import Image from "next/image";
 
@@ -18,12 +17,12 @@ const projects = [
     client: "شركة التطوير العقاري",
   },
   {
-    title: "برج السكن الفاخر المعاصر",
+    title: " السكن الفاخر المعاصر",
     location: "جدة، كورنيش البحر الأحمر",
     area: "2,800 م²",
     duration: "4 أشهر",
     type: "كسوة معدنية متطورة",
-    image: "/p2.jpg?height=400&width=600",
+    image: "/cladding/c-1.jpg?height=400&width=600",
     status: "قيد التنفيذ",
     rating: 5,
     client: "مجموعة الإسكان الراقي",
@@ -34,7 +33,7 @@ const projects = [
     area: "5,200 م²",
     duration: "8 أشهر",
     type: "واجهة مركبة مبتكرة",
-    image: "/p3.jpg?height=400&width=600",
+    image: "/cladding/c-3.jpg?height=400&width=600",
     status: "مكتمل",
     rating: 5,
     client: "شركة المراكز التجارية",
@@ -56,7 +55,7 @@ const projects = [
     area: "1,600 م²",
     duration: "2.5 أشهر",
     type: "ديكورات داخلية باستخدام تقنية CNC",
-    image: "/p5.jpg?height=400&width=600",
+    image: "/cladding/c-5.jpg?height=400&width=600",
     status: "قيد التنفيذ",
     rating: 5,
     client: "شركة التقنية المتقدمة",

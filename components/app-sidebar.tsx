@@ -1,5 +1,13 @@
-"use client"
-import { ChevronDown, Home, Phone, FileText, Building2, Award, Layers } from "lucide-react"
+"use client";
+import {
+  ChevronDown,
+  Home,
+  Phone,
+  FileText,
+  Building2,
+  Award,
+  Layers,
+} from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -13,9 +21,13 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
-} from "@/components/ui/sidebar"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { Button } from "@/components/ui/button"
+} from "@/components/ui/sidebar";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import { Button } from "@/components/ui/button";
 
 const menuItems = [
   {
@@ -29,7 +41,7 @@ const menuItems = [
     url: "#",
     submenu: [
       { title: "الواجهات الزجاجية المتقدمة", url: "#" },
-      { title: "الكسوة المعدنية الحديثة", url: "#" },
+      { title: "تركيب الكسوة المعدنية الحديثة", url: "#" },
       { title: "الواجهات الحجرية الطبيعية", url: "#" },
       { title: "الأنظمة المركبة المبتكرة", url: "#" },
       { title: "الصيانة والترميم المتخصص", url: "#" },
@@ -50,7 +62,7 @@ const menuItems = [
     icon: FileText,
     url: "#",
   },
-]
+];
 
 export function AppSidebar() {
   return (
@@ -62,8 +74,12 @@ export function AppSidebar() {
               <Building2 className="w-8 h-8 text-white" />
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-xl text-white">الكسوة المتقدمة</span>
-              <span className="text-sm text-white/70">حلول معمارية احترافية</span>
+              <span className="font-bold text-xl text-white">
+                تركيب الكسوة المتقدمة
+              </span>
+              <span className="text-sm text-white/70">
+                حلول معمارية احترافية
+              </span>
               <div className="flex items-center gap-1 mt-1">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-xs text-green-300">متاح الآن</span>
@@ -83,7 +99,9 @@ export function AppSidebar() {
                         <CollapsibleTrigger asChild>
                           <SidebarMenuButton className="w-full text-white hover:bg-white/10 transition-all duration-300 rounded-xl py-3 px-4 group-hover:scale-[1.02]">
                             <item.icon className="w-5 h-5" />
-                            <span className="font-medium text-sm">{item.title}</span>
+                            <span className="font-medium text-sm">
+                              {item.title}
+                            </span>
                             <ChevronDown className="mr-auto h-4 w-4 transition-transform duration-300 group-data-[state=open]/collapsible:rotate-180" />
                           </SidebarMenuButton>
                         </CollapsibleTrigger>
@@ -109,7 +127,9 @@ export function AppSidebar() {
                       >
                         <a href={item.url} className="flex items-center gap-3">
                           <item.icon className="w-5 h-5" />
-                          <span className="font-medium text-sm">{item.title}</span>
+                          <span className="font-medium text-sm">
+                            {item.title}
+                          </span>
                         </a>
                       </SidebarMenuButton>
                     )}
@@ -131,5 +151,5 @@ export function AppSidebar() {
         </SidebarFooter>
       </div>
     </Sidebar>
-  )
+  );
 }

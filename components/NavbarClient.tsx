@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const services = [
-  { name: "الكسوة", path: "/" },
+  { name: "تركيب الكسوة", path: "/" },
   { name: " إعلان", path: "/services/advertisement" },
   { name: "حروف مرفوعة", path: "/services/raised-letters" },
 ];

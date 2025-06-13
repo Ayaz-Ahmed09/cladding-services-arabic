@@ -12,7 +12,7 @@
 // } from "@/components/ui/dropdown-menu";
 
 // const services = [
-//   { name: "الكسوة", path: "" },
+//   { name: "تركيب الكسوة", path: "" },
 //   { name: "الصلب والزنك", path: "" },
 //   { name: "حروف مرفوعة", path: "/services/raised-letters" },
 //   { name: "القطع بالليزر – CNC", path: "" },
@@ -49,7 +49,7 @@
 //             </div>
 //             <div className="hidden sm:block">
 //               <div className="font-bold text-xl text-[var(--dark)]">
-//                 الكسوة المتقدمة
+//                 تركيب الكسوة المتقدمة
 //               </div>
 //               <div className="text-sm text-[var(--accent)]">
 //                 حلول معمارية احترافية

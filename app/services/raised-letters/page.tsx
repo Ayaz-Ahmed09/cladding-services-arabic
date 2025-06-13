@@ -426,6 +426,7 @@ import DynamicServices from "@/components/DynamicServices";
 import { Type, Lightbulb, Crop, Layers, Bold } from "lucide-react";
 import DynamicProjectGallery from "@/components/DynamicProjectGallery.tsx";
 import TechSpecs from "@/components/tech-specs";
+import TestimonialSlider from "@/components/TestimonialSection";
 const raisedLetterServices = [
   {
     icon: Type,
@@ -540,6 +541,35 @@ const Projects = [
     client: "مطاعم مذاق الشرق",
   },
 ];
+const testimonials = [
+  {
+    name: "عبدالعزيز المطيري",
+    jobTitle: "صاحب محل تجاري",
+    comment:
+      "الحروف المرفوعة أضافت لمسة فخامة لواجهة المحل، فعلاً جودة عالية واحترافية.",
+    rating: 5,
+  },
+  {
+    name: "لمياء الخالد",
+    jobTitle: "مصممة شعارات",
+    comment:
+      "فريق مبدع نفذ الشعار بحروف مرفوعة بشكل مطابق تمامًا للتصميم وبإضاءة جذابة.",
+    rating: 4.5,
+  },
+  {
+    name: "فيصل الحربي",
+    jobTitle: "مدير مشروع تجاري",
+    comment:
+      "التنفيذ دقيق وسريع، والحروف المرفوعة جذبت انتباه الزوار من أول نظرة.",
+    rating: 4,
+  },
+  {
+    name: "أماني العتيبي",
+    jobTitle: "مالكة كافيه",
+    comment: "حبيت النتيجة! واجهة الكافيه بالحروف المرفوعة صارت مميزة جداً.",
+    rating: 5,
+  },
+];
 
 export default function RaisedLettersPage() {
   return (
@@ -564,6 +594,7 @@ export default function RaisedLettersPage() {
       />
       <DynamicProjectGallery projects={Projects} />
       <TechSpecs />
+      <TestimonialSlider testimonials={testimonials} />
     </>
   );
 }

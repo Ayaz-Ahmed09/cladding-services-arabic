@@ -14,6 +14,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import TechSpecs from "@/components/tech-specs";
+import TestimonialSlider from "@/components/TestimonialSection";
 
 const AdServices = [
   {
@@ -111,6 +112,34 @@ const Projects = [
     client: "سوبرماركت الخير",
   },
 ];
+const testimonials = [
+  {
+    name: "راكان الدوسري",
+    jobTitle: "صاحب شركة تسويق",
+    comment:
+      "الإعلانات كانت فعّالة جداً وبتصميم جذاب، ساعدتنا في جذب عملاء جدد خلال وقت قصير.",
+    rating: 5,
+  },
+  {
+    name: "نوف القحطاني",
+    jobTitle: "مديرة متجر إلكتروني",
+    comment:
+      "فريق مميز وتصاميم إبداعية. الإعلان على الواجهة زاد من المبيعات بنسبة ملحوظة.",
+    rating: 5,
+  },
+  {
+    name: "تركي العتيبي",
+    jobTitle: "مدير معرض سيارات",
+    comment: "الإعلان الخارجي كان واضح وملفت جداً، وكل من يمر بالشارع يلاحظه.",
+    rating: 4,
+  },
+  {
+    name: "حنين العبدالله",
+    jobTitle: "أخصائية تسويق",
+    comment: "الخدمة سريعة والتنسيق ممتاز، وفريقهم فاهم السوق المحلي تمامًا.",
+    rating: 5,
+  },
+];
 
 const advertisementPage = () => {
   return (
@@ -137,6 +166,7 @@ const advertisementPage = () => {
       />
       <DynamicProjectGallery projects={Projects} />
       <TechSpecs />
+      <TestimonialSlider testimonials={testimonials} />
     </section>
   );
 };

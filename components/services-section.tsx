@@ -15,7 +15,7 @@
 // const services = [
 //   {
 //     icon: Layers,
-//     title: "الكسوة",
+//     title: "تركيب الكسوة",
 //     description:
 //       "نقدم أنظمة كسوة خارجية عصرية للمباني، تجمع بين التصميم الجمالي والحماية العالية من العوامل البيئية، مع تشكيلة واسعة من المواد والتشطيبات.",
 //     features: [
@@ -95,11 +95,11 @@
 
 //           <h2 className="text-4xl md:text-6xl font-black text-[var(--dark)] mb-8">
 //             <span className="block">حلول شاملة</span>
-//             <span className="text-gradient">لجميع احتياجات الكسوة</span>
+//             <span className="text-gradient">لجميع احتياجات تركيب الكسوة</span>
 //           </h2>
 
 //           <p className="text-xl text-[var(--dark)]/70 max-w-4xl mx-auto leading-relaxed font-light">
-//             نقدم مجموعة متكاملة من الخدمات المتخصصة في مجال الكسوة والواجهات، مع
+//             نقدم مجموعة متكاملة من الخدمات المتخصصة في مجال تركيب الكسوة والواجهات، مع
 //             التركيز على الجودة والابتكار والالتزام بالمواعيد المحددة
 //           </p>
 //         </div>
@@ -196,7 +196,7 @@
 
 //   {
 //     icon: Layers,
-//     title: "الكسوة",
+//     title: "تركيب الكسوة",
 //     description:
 //       "نقدم أنظمة كسوة خارجية عصرية للمباني، تجمع بين التصميم الجمالي والحماية العالية من العوامل البيئية، مع تشكيلة واسعة من المواد والتشطيبات.",
 //     features: [
@@ -290,11 +290,11 @@
 
 //           <h2 className="text-4xl md:text-6xl font-black text-[var(--dark)] mb-8">
 //             <span className="block">حلول شاملة</span>
-//             <span className="text-gradient">لجميع احتياجات الكسوة</span>
+//             <span className="text-gradient">لجميع احتياجات تركيب الكسوة</span>
 //           </h2>
 
 //           <p className="text-xl text-[var(--dark)]/70 max-w-4xl mx-auto leading-relaxed font-light">
-//             نقدم مجموعة متكاملة من الخدمات المتخصصة في مجال الكسوة والواجهات، مع
+//             نقدم مجموعة متكاملة من الخدمات المتخصصة في مجال تركيب الكسوة والواجهات، مع
 //             التركيز على الجودة والابتكار والالتزام بالمواعيد المحددة
 //           </p>
 //         </div>
@@ -419,7 +419,7 @@ import Link from "next/link";
 const services = [
   {
     icon: Layers,
-    title: "الكسوة",
+    title: "تركيب كلادينج ",
     description:
       "نقدم أنظمة كسوة خارجية عصرية للمباني، تجمع بين التصميم الجمالي والحماية العالية من العوامل البيئية، مع تشكيلة واسعة من المواد والتشطيبات.",
     features: [
@@ -518,12 +518,13 @@ export default function ServicesSection() {
 
           <h2 className="text-4xl md:text-6xl font-black text-[var(--dark)] mb-8">
             <span className="block">حلول شاملة</span>
-            <span className="text-gradient">لجميع احتياجات الكسوة</span>
+            <span className="text-gradient">لجميع احتياجات تركيب الكسوة</span>
           </h2>
 
           <p className="text-xl text-[var(--dark)]/70 max-w-4xl mx-auto leading-relaxed font-light">
-            نقدم مجموعة متكاملة من الخدمات المتخصصة في مجال الكسوة والواجهات، مع
-            التركيز على الجودة والابتكار والالتزام بالمواعيد المحددة
+            نقدم مجموعة متكاملة من الخدمات المتخصصة في مجال تركيب الكسوة
+            والواجهات، مع التركيز على الجودة والابتكار والالتزام بالمواعيد
+            المحددة
           </p>
         </div>
 
