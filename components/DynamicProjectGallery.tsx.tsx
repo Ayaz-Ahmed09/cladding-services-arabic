@@ -23,12 +23,22 @@ export default function DynamicProjectGallery({
   projects: Project[];
 }) {
   return (
-    <section className="py-20 bg-gradient-to-br from-[var(--light)] to-white relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-[var(--primary)]/10 to-[var(--accent)]/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 right-10 w-80 h-80 bg-gradient-to-br from-[var(--accent)]/10 to-[var(--secondary)]/10 rounded-full blur-3xl"></div>
-
-      <div className="container mx-auto px-4 relative">
+    <section className="py-20 px-4 relative z-0 overflow-hidden bg-white text-[var(--dark)]">
+      {/* Background pattern */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div
+          className="w-full h-full opacity-10 blur-sm"
+          style={{
+            backgroundImage: `
+          linear-gradient(30deg, black 1px, transparent 1px),
+          linear-gradient(150deg, black 2px, transparent 2px),
+          linear-gradient(90deg, black 3px, transparent 3px)
+        `,
+            backgroundSize: "20px 20px",
+          }}
+        ></div>
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-[var(--accent)] to-[var(--secondary)] text-white px-8 py-3 rounded-full text-sm font-bold mb-8 shadow-lg">
@@ -58,6 +68,7 @@ export default function DynamicProjectGallery({
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
+                  loading="lazy"
                   width={600}
                   height={400}
                   className="w-full h-72 object-cover transition-all duration-700 group-hover:scale-110"

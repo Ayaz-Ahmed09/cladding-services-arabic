@@ -188,10 +188,10 @@ export default function Navbar() {
               <Building2 className="w-7 h-7 text-white" />
             </div>
             <div className="hidden sm:block">
-              <div className="font-bold text-xl text-[var(--dark)]">
-                شركة وجد الحياة للتجارة
+              <div className="font-bold text-xl text-[var(--accent)]">
+                جولدن ليتر
               </div>
-              <div className="text-sm text-[var(--accent)]">
+              <div className="text-sm text-[var(--secondary)]">
                 حلول معمارية احترافية
               </div>
             </div>

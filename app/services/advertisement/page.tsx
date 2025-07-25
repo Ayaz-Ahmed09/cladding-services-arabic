@@ -3,7 +3,7 @@ import React from "react";
 import HeroSection from "@/components/hero-section";
 import DynamicServices from "@/components/DynamicServices";
 import DynamicProjectGallery from "@/components/DynamicProjectGallery.tsx";
-
+import { useEffect } from "react";
 import {
   Type,
   Lightbulb,
@@ -142,6 +142,9 @@ const testimonials = [
 ];
 
 const advertisementPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section>
       <title>

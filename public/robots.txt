@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://golden-letters.com/
+
+# Sitemaps
+Sitemap: https://golden-letters.com/sitemap.xml

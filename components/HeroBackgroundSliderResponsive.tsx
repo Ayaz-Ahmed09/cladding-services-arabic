@@ -1,13 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const responsiveSliderImages = [
   {
     desktop: "/images/d-p1.jpeg",
-    mobile: "/images/m-p1.jpg",
+    mobile: "/images/m-p1.jpeg",
   },
   {
     desktop: "/images/d-p2.jpeg",
@@ -42,33 +41,28 @@ export default function HeroBackgroundSliderResponsive() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % responsiveSliderImages.length);
-    }, 3000);
-
+    }, 3000); // Slower transition
     return () => clearInterval(interval);
   }, []);
 
-  const currentImage = isMobile
-    ? responsiveSliderImages[currentIndex].mobile
-    : responsiveSliderImages[currentIndex].desktop;
-
   return (
-    <div className="absolute inset-0 z-0">
-      <motion.div
-        key={currentImage}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="absolute inset-0 w-full h-full"
-      >
-        <Image
-          src={currentImage}
-          alt={`Background ${currentIndex + 1}`}
-          fill
-          sizes="100vw"
-          className="object-cover brightness-50"
-          priority={currentIndex === 0}
-        />
-      </motion.div>
+    <div className="absolute inset-0 z-0 bg-black overflow-hidden">
+      {responsiveSliderImages.map((img, index) => {
+        const src = isMobile ? img.mobile : img.desktop;
+        return (
+          <Image
+            key={index}
+            src={src}
+            alt={`Background ${index + 1}`}
+            fill
+            sizes="100vw"
+            priority={index === 0}
+            className={`object-cover brightness-50 absolute inset-0 transition-opacity duration-500 ease-in-out ${
+              index === currentIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
+          />
+        );
+      })}
     </div>
   );
 }

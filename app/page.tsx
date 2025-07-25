@@ -1,69 +1,64 @@
-import HeroSection from "@/components/hero-section";
-import ServicesSection from "@/components/services-section";
-import ProjectsShowcase from "@/components/projects-showcase";
-import TechSpecs from "@/components/tech-specs";
-import BuildingVisualizer from "@/components/building-visualizer";
-import TestimonialSection from "@/components/TestimonialSection";
-export default function Home() {
+import HeroSection from "@/components/home-layout/Hero-section";
+import HomeServicesSection from "@/components/home-layout/Home-Services";
+import React from "react";
+import CounterCard from "@/components/home-layout/Counter-Card";
+import ProjectGlimpseSection from "@/components/home-layout/Project-Decks";
+import TrustedClientsSection from "@/components/home-layout/Trusted-clients";
+import WhyChooseUsSection from "@/components/home-layout/WhyChooseUsSection";
+import TestimonialSlider from "@/components/TestimonialSection";
+import ContactSection from "@/components/home-layout/ContactSection";
+
+const page = () => {
   const testimonials = [
     {
-      name: "عبدالله السبيعي",
-      jobTitle: "مالك مبنى تجاري",
+      name: "سعود الجهني",
+      jobTitle: "مدير عام لشركة مقاولات",
       comment:
-        "طلبت تركيب كلادينج للمبنى، والنتيجة كانت مذهلة. تشطيب راقٍ وجودة ممتازة.",
+        "تعاونّا معهم في تنفيذ كلادينج واجهة المبنى، وكانت النتيجة مذهلة، جودة تشطيب عالية ودقة في المواعيد.",
       rating: 5,
     },
     {
-      name: "نورة الزهراني",
-      jobTitle: "مهندسة تصميم داخلي",
+      name: "نوف السبيعي",
+      jobTitle: "مديرة تسويق في شركة أزياء",
       comment:
-        "الكلادينج أعطى المبنى طابع عصري وأنيق. أنصح بالتعامل مع هذا الفريق الرائع.",
+        "الإعلانات الخارجية التي نفذوها رفعت من ظهور العلامة التجارية بشكل احترافي وجذاب، أنصح بالتعامل معهم بشدة.",
+      rating: 4.5,
+    },
+    {
+      name: "بدر العلي",
+      jobTitle: "صاحب معرض سيارات",
+      comment:
+        "الحروف البارزة أعطت واجهة المعرض طابع فخم وراقي، وتم تنفيذ المشروع باحترافية عالية.",
       rating: 5,
     },
     {
-      name: "خالد الشهراني",
-      jobTitle: "مقاول مشاريع",
+      name: "أمل الحربي",
+      jobTitle: "مصممة داخلية",
       comment:
-        "الكلادينج تم تركيبه باحترافية عالية. الدقة في التفاصيل والالتزام بالمواعيد كانت ممتازة.",
+        "خدمة مميزة في تنفيذ الحروف والإعلانات، الفريق متعاون جدًا ويهتم بأدق التفاصيل.",
       rating: 4,
     },
     {
-      name: "أمينة العتيبي",
-      jobTitle: "مالكة عيادة تجميل",
-      comment: "كل من يشاهد الواجهة يسأل عن الكلادينج! شكل جميل وجودة مبهرة.",
-      rating: 5,
-    },
-    {
-      name: "بدر الحربي",
-      jobTitle: "صاحب مؤسسة بناء",
+      name: "خالد العتيبي",
+      jobTitle: "رئيس قسم المشاريع في مؤسسة تجارية",
       comment:
-        "تعاملت مع عدة شركات لكن تنفيذ الكلادينج من هذه الشركة كان الأفضل.",
+        "نفذوا لنا مشروع كلادينج كامل مع الإعلانات، وفعلاً أثبتوا أنهم الأفضل من ناحية الجودة والسعر.",
       rating: 5,
     },
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* <Navbar /> */}
-
-      <main>
-        <HeroSection
-          images={[
-            "/aluminiumum.jpg",
-            "/cladding/c-1.jpg",
-            "/cladding/c-5.jpg",
-          ]}
-          badgeText={"    مقاول تركيب واجهات في الرياض     "}
-          headingLines={["تركيب", "كلادينج", "عصرية"]}
-          description={"تعكس فخامة مشروعك"}
-        />
-
-        <ServicesSection />
-        <ProjectsShowcase />
-        <TechSpecs />
-        <TestimonialSection testimonials={testimonials} />
-        <BuildingVisualizer />
-      </main>
-    </div>
+    <main className="overflow-x-hidden">
+      <HeroSection />
+      <HomeServicesSection />
+      <ProjectGlimpseSection />
+      <CounterCard />
+      <TrustedClientsSection />
+      <WhyChooseUsSection />
+      <TestimonialSlider testimonials={testimonials} />
+      <ContactSection />
+    </main>
   );
-}
+};
+
+export default page;
