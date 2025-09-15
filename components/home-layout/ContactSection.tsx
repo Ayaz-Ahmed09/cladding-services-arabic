@@ -205,7 +205,7 @@ export default function ContactSection() {
           <ContactCard
             icon={<Phone className="w-5 h-5" />}
             title="رقم الهاتف"
-            info={<span dir="ltr">+966 580157728</span>}
+            info={<span dir="ltr">+966596656906</span>}
           />
           <ContactCard
             icon={<Mail className="w-5 h-5" />}

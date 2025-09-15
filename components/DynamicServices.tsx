@@ -115,7 +115,7 @@ export default function ServicesSection({
                 <div className="flex flex-col gap-3 relative z-10">
                   {/* WhatsApp */}
                   <a
-                    href="https://wa.me/‎+966 59 665 6906"
+                    href="https://wa.me/966596656906"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full"

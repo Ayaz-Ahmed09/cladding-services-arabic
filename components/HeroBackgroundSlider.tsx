@@ -115,7 +115,7 @@ export default function HeroBackgroundSlider({ images }: SliderProps) {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000); // Show image every 5 seconds
+    }, 3000); 
     return () => clearInterval(interval);
   }, [images.length]);
 

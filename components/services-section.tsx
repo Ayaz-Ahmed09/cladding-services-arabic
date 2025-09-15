@@ -174,7 +174,7 @@ export default function ServicesSection() {
                 <div className="flex flex-col gap-3 relative z-10 mt-auto">
                   {/* WhatsApp Button */}
                   <a
-                    href="https://wa.me/966500000000"
+                    href="https://wa.me/966596656906"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full"

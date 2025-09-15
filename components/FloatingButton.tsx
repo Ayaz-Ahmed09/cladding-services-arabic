@@ -8,7 +8,7 @@ export default function FloatingButton() {
     <div className="fixed bottom-5 right-5 z-50 flex flex-col gap-4">
       {/* WhatsApp Button */}
       <Link
-        href="https://wa.me/‎+966 59 665 6906"
+        href="https://wa.me/966596656906"
         target="_blank"
         className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
         aria-label="Chat on WhatsApp"
@@ -18,7 +18,8 @@ export default function FloatingButton() {
 
       {/* Call Button */}
       <Link
-        href="tel:‎+966 59 665 6906"
+        href="tel:+966596656906
+"
         className="bg-blue-500 hover:bg-blue-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
         aria-label="Call us"
       >

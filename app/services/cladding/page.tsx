@@ -3,7 +3,6 @@ import HeroSection from "@/components/hero-section";
 import ServicesSection from "@/components/services-section";
 import ProjectsShowcase from "@/components/projects-showcase";
 import TechSpecs from "@/components/tech-specs";
-import BuildingVisualizer from "@/components/building-visualizer";
 import TestimonialSection from "@/components/TestimonialSection";
 import ClientOnlyBuildingVisualizer from "@/components/client-only-building-visualizer";
 export default function Home() {

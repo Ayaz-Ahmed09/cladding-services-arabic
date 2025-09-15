@@ -30,7 +30,7 @@ export default function Footer() {
             والكلادينج في المملكة العربية السعودية.
           </p>
           <a
-            href="https://wa.me/‎+966 59 665 6906"
+            href="https://wa.me/966596656906"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-2 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] hover:opacity-90 transition text-white px-5 py-2 rounded-lg text-sm"
@@ -103,7 +103,7 @@ export default function Footer() {
           </h4>
           <div className="flex items-center justify-end gap-2">
             <Phone className="w-4 h-4 text-[var(--accent)]" />
-            <span dir="ltr">+966 580157728</span>
+            <span dir="ltr">+966 59 665 6906</span>
           </div>
           <div className="flex items-center justify-end gap-2">
             <Mail className="w-4 h-4 text-[var(--accent)]" />

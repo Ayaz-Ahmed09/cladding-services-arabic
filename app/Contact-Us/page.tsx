@@ -45,7 +45,8 @@ export default function ContactUsPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {/* Phone */}
           <a
-            href="tel:‎+966 59 665 6906"
+            href="tel:+966596656906
+"
             className="bg-white/90 backdrop-blur shadow-md p-6 rounded-2xl text-center transition-all hover:shadow-2xl hover:scale-[1.02] duration-200 cursor-pointer block"
           >
             <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center bg-gradient-to-br from-[var(--primary)] to-[var(--accent)] rounded-full shadow-md">
@@ -54,12 +55,13 @@ export default function ContactUsPage() {
             <h4 className="text-lg font-bold text-[var(--dark)] mb-1">
               الهاتف
             </h4>
-            <p className="text-[var(--dark)]/70 text-sm">‎+966 59 665 6906</p>
+            <p className="text-[var(--dark)]/70 text-sm">+966596656906
+</p>
           </a>
 
           {/* WhatsApp */}
           <a
-            href="https://wa.me/966580157728"
+            href="https://wa.me/966596656906"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white/90 backdrop-blur shadow-md p-6 rounded-2xl text-center transition-all hover:shadow-2xl hover:scale-[1.02] duration-200 cursor-pointer block"
@@ -70,7 +72,8 @@ export default function ContactUsPage() {
             <h4 className="text-lg font-bold text-[var(--dark)] mb-1">
               واتساب
             </h4>
-            <p className="text-[var(--dark)]/70 text-sm">‎+966 59 665 6906</p>
+            <p className="text-[var(--dark)]/70 text-sm">+966596656906
+</p>
           </a>
 
           {/* Email */}
