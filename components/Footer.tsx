@@ -30,7 +30,7 @@ export default function Footer() {
             والكلادينج في المملكة العربية السعودية.
           </p>
           <a
-            href="https://wa.me/+966580157728"
+            href="https://wa.me/‎+966 59 665 6906"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-2 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] hover:opacity-90 transition text-white px-5 py-2 rounded-lg text-sm"

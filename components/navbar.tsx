@@ -97,10 +97,10 @@
 //           <div className="hidden lg:flex items-center gap-4">
 //             <div className="text-left" dir="ltr">
 //               <div className="text-sm text-[var(--accent)]">اتصل الآن</div>
-//               <div className="font-bold text-[var(--dark)]">+966580157728</div>
+//               <div className="font-bold text-[var(--dark)]">‎+966 59 665 6906</div>
 //             </div>
 //             <a
-//               href="https://wa.me/+966580157728"
+//               href="https://wa.me/‎+966 59 665 6906"
 //               target="_blank"
 //               rel="noopener noreferrer"
 //             >
@@ -156,7 +156,7 @@
 //               تواصل معنا
 //             </Link>
 //             <a
-//               href="https://wa.me/+966580157728"
+//               href="https://wa.me/‎+966 59 665 6906"
 //               target="_blank"
 //               rel="noopener noreferrer"
 //             >

@@ -106,7 +106,7 @@ export default function TechSpecs() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
             {/* WhatsApp */}
             <a
-              href="https://wa.me/+966580157728"
+              href="https://wa.me/‎+966 59 665 6906"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center justify-center gap-3 px-6 py-8 bg-green-500 text-white rounded-2xl shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all text-center"
@@ -117,7 +117,7 @@ export default function TechSpecs() {
 
             {/* Direct Call */}
             <a
-              href="tel:+966580157728"
+              href="tel:‎+966 59 665 6906"
               className="flex flex-col items-center justify-center gap-3 px-6 py-8 bg-blue-500 text-white rounded-2xl shadow-lg hover:-translate-y-1 hover:shadow-xl transition-all text-center"
             >
               <Phone className="w-7 h-7" />
